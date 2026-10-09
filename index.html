@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Расписание лаборатории</title>
-  <link rel="stylesheet" href="./styles/style.css">
+<meta charset="UTF-8">
+<title>Расписание лаборатории</title>
+<style>
+table { width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; }
+th, td { padding: 14px; border: 1px solid #cfcfcf; }
+caption { font-size: 1.1rem; font-weight: bold; margin-bottom: 12px; text-align: left; color: #333; }
+.schedule__head { background-color: #2c3e50; color: #ffffff; }
+.schedule__head th { border-color: #34495e; text-align: center; }
+.schedule__body th { background-color: #f8f9fa; text-align: left; font-weight: 600; }
+.schedule__body td { text-align: center; }
+.schedule__body tr:nth-child(even) { background-color: #f2f4f4; }
+.schedule__maintenance { background-color: #fef9e7; color: #b7950b; font-style: italic; font-weight: 500; }
+.schedule__foot { background-color: #eaeded; font-weight: bold; }
+.schedule__foot th { text-align: left; }
+.schedule__foot td { text-align: center; color: #27ae60; }
+.schedule__body tr:hover { background-color: #e8f4f8; }
+.schedule__body tr:nth-child(even):hover { background-color: #dfedf2; }
+</style>
 </head>
 <body>
-  <main class="page">
-    <h1>Расписание компьютерной лаборатории</h1>
-    <!-- Создайте здесь семантическую таблицу по заданию -->
-  </main>
+<main class="schedule">
+<h1>Расписание компьютерной лаборатории</h1>
+<table class="schedule__table">
+<caption>График загруженности компьютерной лаборатории №302 на текущую учебную неделю</caption>
+<thead class="schedule__head">
+<tr>
+<th scope="col">День</th>
+<th scope="col">09:00–10:30</th>
+<th scope="col">10:40–12:10</th>
+<th scope="col">12:40–14:10</th>
+</tr>
+</thead>
+<tbody class="schedule__body">
+<tr>
+<th scope="row">Понедельник</th>
+<td>Веб-разработка</td>
+<td>Свободно</td>
+<td>Свободно</td>
+</tr>
+<tr>
+<th scope="row">Вторник</th>
+<td>Свободно</td>
+<td>Свободно</td>
+<td>Администрирование БД</td>
+</tr>
+<tr>
+<th scope="row">Среда</th>
+<td>Тестирование ПО</td>
+<td>Свободно</td>
+<td>Свободно</td>
+</tr>
+<tr>
+<th scope="row">Четверг</th>
+<td>Свободно</td>
+<td colspan="2" class="schedule__maintenance">Техническое обслуживание</td>
+</tr>
+</tbody>
+<tfoot class="schedule__foot">
+<tr>
+<th scope="row">Итого свободных окон</th>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tfoot>
+</table>
+</main>
 </body>
 </html>
